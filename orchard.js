@@ -51,6 +51,14 @@ const pinkPrice = .55
 
 // CODE HERE
 
+//calculating the total amount of acres picked
+
+let totalAcres = 0
+for (let i = 0; i < fujiAcres.length; i++) {
+    totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i]
+}
+
+console.log(totalAcres)
 
 
 
@@ -69,8 +77,11 @@ const pinkPrice = .55
 
 // CODE HERE
 
+//finding the average of acres pick in the week
 
+let averageDailyAcres = totalAcres / fujiAcres.length + galaAcres.length + pinkAcres.length
 
+console.log(averageDailyAcres)
 
 
 // PROBLEM 3
@@ -105,8 +116,16 @@ const pinkPrice = .55
 let acresLeft = 174 
 let days = 0
 
+
 // CODE HERE
 
+// write while loop to findhow many days left
+while (acresLeft > days) {
+    acresLeft -= averageDailyAcres
+    days++
+}
+    
+console.log(days)
 
 
 // PROBLEM 4
@@ -135,11 +154,13 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
-
-
+let fujiTons = 0
+let galaTons = 0
+let pinkTons = 0
+for(let i = 0; i < fujiAcres; i++){
+    fujiTons = fujiAcres[i] * 6.5
+}
+console.log(fujiTons)
 
 
 
