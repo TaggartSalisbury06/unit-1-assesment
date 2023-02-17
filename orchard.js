@@ -58,7 +58,7 @@ for (let i = 0; i < fujiAcres.length; i++) {
     totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i]
 }
 
-console.log(totalAcres)
+//console.log(totalAcres)
 
 
 
@@ -81,7 +81,7 @@ console.log(totalAcres)
 
 let averageDailyAcres = totalAcres / fujiAcres.length + galaAcres.length + pinkAcres.length
 
-console.log(averageDailyAcres)
+//console.log(averageDailyAcres)
 
 
 // PROBLEM 3
@@ -125,7 +125,7 @@ while (acresLeft > days) {
     days++
 }
     
-console.log(days)
+//console.log(days)
 
 
 // PROBLEM 4
@@ -154,16 +154,30 @@ console.log(days)
 
 // CODE HERE
 
-let fujiTons = 0
-let galaTons = 0
-let pinkTons = 0
-for(let i = 0; i < fujiAcres; i++){
-    fujiTons = fujiAcres[i] * 6.5
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
+fujiTons = fujiAcres.slice(0, 6)
+galaTons = galaAcres.slice(0, 6)
+pinkTons = pinkAcres.slice(0, 6)
+
+for(let i = 0; i < fujiTons.length; i++){
+    fujiTons[i] = fujiTons[i] * 6.5
 }
+
 console.log(fujiTons)
 
+for(let i = 0; i < galaTons.length; i++){
+    galaTons[i] = galaTons[i] * 6.5
+}
 
+console.log(galaTons)
 
+for(let i = 0; i < pinkTons.length; i++){
+    pinkTons[i] = pinkTons[i] * 6.5
+}
+
+console.log(pinkTons)
 
 // PROBLEM 5
 
@@ -182,11 +196,33 @@ console.log(fujiTons)
 */
 
 // CODE HERE 
+let fujiPoundsArr = []
+let fujiPounds = 0
+let galaPoundsArr = []
+let galaPounds = 0
+let pinkPoundsArr = []
+let pinkPounds = 0
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+for(let i = 0; i < fujiTons.length; i++){
+    fujiPoundsArr[i] = 2000 / fujiTons[i]
+    fujiPounds += fujiPoundsArr[i] 
+}
 
+console.log(fujiPounds)
+
+for(let i = 0; i < galaTons.length; i++){
+    galaPoundsArr[i] = 2000 / galaTons[i]
+    galaPounds += galaPoundsArr[i] 
+}
+
+console.log(galaPounds)
+
+for(let i = 0; i < pinkTons.length; i++){
+    pinkPoundsArr[i] = 2000 / pinkTons[i]
+    pinkPounds += pinkPoundsArr[i] 
+}
+
+console.log(pinkPounds)
 
 
 
